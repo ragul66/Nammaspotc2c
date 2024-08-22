@@ -14,7 +14,7 @@ function Navbar() {
         </p>
       </div>
       {/* navbar pages */}
-      <div className="hidden sm:flex flex-row space-x-5 items-center justify-center font-font1 text-white  cursor-pointer">
+      <div className="hidden sm:flex flex-row space-x-5 items-center justify-center font-font1 text-white  cursor-pointer mr-auto">
         <a>HOME</a>
         <a>MENU</a>
         <a>ABOUT</a>

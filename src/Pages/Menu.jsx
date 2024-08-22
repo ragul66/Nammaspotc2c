@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+// burger
 import burger1 from "../assets/burger1.png";
 
+// pasta
+import pasta from "../assets/pasta.png";
+
+//fries
+import fries from "../assets/fries.png";
+
+//pizza
+import pizza from "../assets/pizza.png";
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -14,28 +23,28 @@ function Menu() {
     },
     {
       heading: "Pizza",
-      img: "pizza.jpg",
+      img: pizza,
       headdname: "Pepperoni Pizza",
       Description: "A classic pepperoni pizza with a crispy crust.",
       price: "₹199",
     },
     {
       heading: "Pasta",
-      img: "pasta.jpg",
+      img: pasta,
       headdname: "Spaghetti Bolognese",
       Description: "Spaghetti with a rich and flavorful bolognese sauce.",
       price: "₹149",
     },
     {
       heading: "Fries",
-      img: "fries.jpg",
+      img: fries,
       headdname: "French Fries",
       Description: "Crispy golden french fries.",
       price: "₹49",
     },
     {
       heading: "Fries",
-      img: "fries.jpg",
+      img: fries,
       headdname: "French Fries",
       Description: "Crispy golden french fries.",
       price: "₹49",
@@ -57,7 +66,7 @@ function Menu() {
         {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
           <p
             key={category}
-            className={`text-white bg-cardbg p-2 rounded-full w-20 flex justify-center items-center cursor-pointer ${
+            className={`sm:grid sm:grid-col-4 text-white bg-cardbg p-2 rounded-full w-20 flex justify-center items-center cursor-pointer ${
               selectedCategory === category ? "bg-selectedbg" : ""
             }`}
             onClick={() => setSelectedCategory(category)}
@@ -76,12 +85,14 @@ function Menu() {
             <img
               src={item.img}
               alt={item.headdname}
-              className="w-full h-40 object-cover rounded-lg"
+              className="w-full h-40 object-cover rounded-lg hover:scale-110"
             />
             <div className="bg-cardbg text-white p-2 rounded-lg mt-2">
               <h3 className="text-xl font-bold mt-2">{item.headdname}</h3>
               <p className="mt-2">{item.Description}</p>
-              <div className="text-xl font-bold mt-2">{item.price}</div>
+              <div className="text-xl font-bold mt-2 text-buttoncl">
+                {item.price}
+              </div>
             </div>
           </div>
         ))}
