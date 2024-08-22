@@ -9,7 +9,7 @@ function Navbar() {
           className="w-16 h-16 rounded-full md:ml-[130px] lg:ml-[200px] mt-2 border-2 border-white "
           src={logo}
         />
-        <p className="flex justify-center items-center font-font1 lg:text-2xl text-white">
+        <p className="flex justify-center items-center font-font1 lg:text-2xl sm: text-xl text-white font-bold">
           NammaSpotc2c
         </p>
       </div>
