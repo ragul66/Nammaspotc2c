@@ -14,12 +14,12 @@ function Card({ img, name, offer, order }) {
           className="rounded-full w-32 h-32 border-4 border-borderbg hover:scale-110"
           src={img}
         />
-        <div className="text-center md:text-left md:ml-4">
+        <div className="text-center flex flex-col justify-center items-center md:text-left md:ml-4">
           <h2 className="text-white text-xl font-semibold">{name}</h2>
           <p className="text-white">{offer}</p>
-          <button className="bg-buttoncl text-white px-4 py-2 rounded mt-2">
+          {/* <button className="bg-buttoncl text-white px-4 py-2 rounded mt-2">
             {order}
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ function Home() {
             img={item.img}
             name={item.name}
             offer={item.offer}
-            order={item.order}
+            // order={item.order}
           />
         ))}
       </div>
