@@ -5,11 +5,16 @@ import "./index.css";
 
 // Import Pages from src
 import Home from "./Pages/Home";
+import Menu from "./Pages/Menu";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/Menu",
+    element: <Menu />,
   },
 ]);
 

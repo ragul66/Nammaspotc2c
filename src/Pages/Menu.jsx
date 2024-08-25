@@ -62,7 +62,7 @@ function Menu() {
         Our Home
       </div>
 
-      <div className="flex flex-row justify-center items-center space-x-2 mt-12">
+      <div className="sm:grid sm:grid-cols-4  lg:flex lg:flex-row justify-center items-center space-x-2 mt-12 lg:p-2">
         {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
           <p
             key={category}
@@ -96,6 +96,12 @@ function Menu() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className=" flex justify-center items-center mt-12">
+        <div className="bg-buttoncl w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer">
+          View More
+        </div>
       </div>
     </>
   );
