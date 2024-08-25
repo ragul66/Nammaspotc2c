@@ -62,7 +62,7 @@ function Home() {
       </div>
 
       <div className="flex justify-center items-center font-font1 font-bold text-3xl mt-12">
-        Our Existing Offers
+        Our Exciting Offers
       </div>
 
       {/* Center the cards on large screens */}

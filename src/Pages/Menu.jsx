@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // burger
 import burger1 from "../assets/burger1.png";
 
@@ -10,8 +11,10 @@ import fries from "../assets/fries.png";
 
 //pizza
 import pizza from "../assets/pizza.png";
+import Navbar from "../components/Navbar";
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate();
 
   const data = [
     {
@@ -58,6 +61,9 @@ function Menu() {
 
   return (
     <>
+      <div className="relative flex flex-col ">
+        <Navbar />
+      </div>
       <div className="flex justify-center items-center font-font1 text-3xl font-bold mt-12">
         Our Home
       </div>
@@ -99,7 +105,10 @@ function Menu() {
       </div>
 
       <div className=" flex justify-center items-center mt-12">
-        <div className="bg-buttoncl w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer">
+        <div
+          className="bg-buttoncl w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer"
+          onClick={() => navigate("/Menu")}
+        >
           View More
         </div>
       </div>

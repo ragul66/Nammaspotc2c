@@ -12,22 +12,24 @@ function Navbar() {
   };
 
   return (
-    <div className="absolute flex flex-row justify-center items-center w-full">
-      <div className="flex flex-row lg:p-4 p-4 space-x-2">
+    <div className="absolute flex flex-col sm:flex-row items-center sm:justify-center w-full p-4">
+      {/* Logo and Brand Name */}
+      <div className="flex items-center space-x-2 w-full lg:ml-[100px] sm:w-auto justify-start sm:justify-center">
         <img
-          className="w-16 h-16 rounded-full md:ml-[130px] lg:ml-[200px] mt-2 border-2 border-white"
+          className="w-16 h-16 rounded-full mt-2 border-2 border-white"
           src={logo}
           alt="Logo"
         />
-        <p className="flex justify-center items-center font-font1 lg:text-2xl sm:text-xl text-white font-bold">
+        <p className="font-font1 lg:text-2xl text-xl text-white font-bold">
           NammaSpotc2c
         </p>
       </div>
-      {/* Navbar Pages */}
-      <div className="hidden sm:flex flex-row space-x-5 items-center justify-center font-serif text-white cursor-pointer mr-auto">
+
+      {/* Navbar Pages - Hidden on mobile */}
+      <div className="hidden sm:flex flex-row space-x-5 items-center justify-center font-serif text-white cursor-pointer flex-grow">
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "HOME" ? "text-buttoncl" : ""
+            selectedCategory === "HOME" ? "text-gold" : ""
           }`}
           onClick={() => handleNavigation("HOME", "/")}
         >
@@ -35,7 +37,7 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "MENU" ? "text-buttoncl" : ""
+            selectedCategory === "MENU" ? "text-gold" : ""
           }`}
           onClick={() => handleNavigation("MENU", "/Menu")}
         >
@@ -43,7 +45,7 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "ABOUT" ? "text-buttoncl" : ""
+            selectedCategory === "ABOUT" ? "text-gold" : ""
           }`}
           onClick={() => handleNavigation("ABOUT", "/About")}
         >
@@ -51,14 +53,16 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "CONTACT" ? "text-buttoncl" : ""
+            selectedCategory === "CONTACT" ? "text-gold" : ""
           }`}
           onClick={() => handleNavigation("CONTACT", "/Contact")}
         >
           CONTACT
         </a>
       </div>
-      <div className="text-white">
+
+      {/* User Icon */}
+      <div className="text-white mt-2 sm:mt-0 sm:ml-auto">
         <ion-icon name="person-outline"></ion-icon>
       </div>
     </div>
