@@ -52,7 +52,7 @@ const Combo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-400 p-4 flex flex-col items-center font-font1">
+    <div className="min-h-screen bg-gray-300 p-4 flex flex-col items-center font-font1">
       <header className="w-full max-w-4xl text-center mb-6">
         <h1 className="text-4xl font-bold text-red-600">Combo Offers</h1>
         <p className="text-lg text-white mt-2">
