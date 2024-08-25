@@ -65,7 +65,7 @@ const Combo = () => {
         </p>
       </header>
 
-      <div className="w-full max-w-6xl  grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4">
+      <div className="w-full max-w-6xl  grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 ">
         {combos.map((combo) => (
           <div
             key={combo.id}

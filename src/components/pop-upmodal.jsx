@@ -20,7 +20,7 @@ const OfferModal = () => {
           <div className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4">
             {/* Close Button */}
             <button
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+              className="absolute top-4 right-4 text-black hover:text-gray-800 text-3xl -mt-6 mr-auto"
               onClick={handleClose}
             >
               &times;

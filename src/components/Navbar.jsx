@@ -66,7 +66,7 @@ function Navbar() {
 
       <div className="sm:flex sm:flex-row mr-auto">
         <img
-          className="w-12 h-12 md:w-20 md:h-20 lg:w-20 lg:h-20 -auto cursor-pointer"
+          className="w-12 h-12 md:w-20 md:h-20 lg:w-20 lg:h-20 -auto cursor-pointer animate-wiggle"
           src={gif}
           onClick={() => navigate("/combos")}
         />
