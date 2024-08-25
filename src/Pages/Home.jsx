@@ -5,6 +5,7 @@ import one from "../assets/1.jpg";
 import two from "../assets/2.jpg";
 import Navbar from "../components/Navbar";
 import Menu from "./Menu";
+import OfferModal from "../components/pop-upmodal";
 
 function Card({ img, name, offer, order }) {
   return (
@@ -44,6 +45,7 @@ function Home() {
 
   return (
     <>
+      <OfferModal />
       <div className="">
         <Navbar />
         {/* Mobile Screen */}
