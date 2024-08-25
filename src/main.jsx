@@ -7,6 +7,7 @@ import "./index.css";
 import Home from "./Pages/Home";
 import Menu from "./Pages/Menu";
 import Combo from "./Pages/Combo";
+import About from "./Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/combos",
     element: <Combo />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

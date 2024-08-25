@@ -1,5 +1,7 @@
 import React from "react";
 import image from "../assets/burger1.png";
+import Footer from "../components/Footer";
+import offer from "../assets/offerpage.png";
 
 const Combo = () => {
   const combos = [
@@ -52,10 +54,13 @@ const Combo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-300 p-4 flex flex-col items-center font-font1">
+    <div className="min-h-screen bg-white  p-4 flex flex-col items-center font-font1">
       <header className="w-full max-w-4xl text-center mb-6">
+        {/* <div className="ml-auto flex flex-row">
+          <img className="w-12 h-12" src={offer} />
+        </div> */}
         <h1 className="text-4xl font-bold text-red-600">Combo Offers</h1>
-        <p className="text-lg text-white mt-2">
+        <p className="text-lg text-gray-600 mt-2">
           Choose your favorite combo and enjoy the deliciousness!
         </p>
       </header>
@@ -88,6 +93,7 @@ const Combo = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

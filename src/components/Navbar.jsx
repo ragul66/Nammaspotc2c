@@ -50,7 +50,7 @@ function Navbar() {
           className={`hover:text-buttoncl ${
             selectedCategory === "ABOUT" ? "text-gold" : ""
           }`}
-          onClick={() => handleNavigation("ABOUT", "/About")}
+          onClick={() => handleNavigation("ABOUT", "/about")}
         >
           ABOUT
         </a>
