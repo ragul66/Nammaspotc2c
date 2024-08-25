@@ -61,9 +61,6 @@ function Menu() {
 
   return (
     <>
-      <div className="relative flex flex-col ">
-        <Navbar />
-      </div>
       <div className="flex justify-center items-center font-font1 text-3xl font-bold mt-12">
         Our Home
       </div>

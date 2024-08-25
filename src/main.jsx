@@ -6,6 +6,7 @@ import "./index.css";
 // Import Pages from src
 import Home from "./Pages/Home";
 import Menu from "./Pages/Menu";
+import Combo from "./Pages/Combo";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/Menu",
     element: <Menu />,
+  },
+  {
+    path: "/combos",
+    element: <Combo />,
   },
 ]);
 

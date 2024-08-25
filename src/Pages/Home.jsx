@@ -66,7 +66,7 @@ function Home() {
       </div>
 
       {/* Center the cards on large screens */}
-      <div className="sm:grid sm:grid-cols-1 md:grid md:grid-cols-2 lg:flex lg:justify-center lg:items-center gap-4 p-4">
+      <div className="grid grid-cols-2 md:grid md:grid-cols-2 lg:flex lg:justify-center lg:items-center gap-4 p-4">
         {data.map((item, index) => (
           <Card
             key={index}

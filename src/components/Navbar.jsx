@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
+import gif from "../assets/special gif.gif";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -26,10 +27,12 @@ function Navbar() {
       </div>
 
       {/* Navbar Pages - Hidden on mobile */}
-      <div className="hidden sm:flex flex-row space-x-5 items-center justify-center font-serif text-white cursor-pointer flex-grow">
+      <div className="hidden sm:flex flex-row space-x-10 items-center justify-center font-serif text-white cursor-pointer flex-grow">
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "HOME" ? "text-gold" : ""
+            selectedCategory === "HOME"
+              ? "text-gold  border-b-2 border-buttoncl"
+              : ""
           }`}
           onClick={() => handleNavigation("HOME", "/")}
         >
@@ -61,10 +64,18 @@ function Navbar() {
         </a>
       </div>
 
-      {/* User Icon */}
-      <div className="text-white mt-2 sm:mt-0 sm:ml-auto">
-        <ion-icon name="person-outline"></ion-icon>
+      <div className="sm:flex sm:flex-row mr-auto">
+        <img
+          className="w-12 h-12 md:w-20 md:h-20 lg:w-20 lg:h-20 -auto cursor-pointer"
+          src={gif}
+          onClick={() => navigate("/combos")}
+        />
       </div>
+
+      {/* User Icon */}
+      {/* <div className="text-white mt-2 sm:mt-0 sm:ml-auto">
+        <ion-icon name="person-outline"></ion-icon>
+      </div> */}
     </div>
   );
 }
