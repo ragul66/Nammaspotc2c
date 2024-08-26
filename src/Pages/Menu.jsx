@@ -85,7 +85,9 @@ function Menu() {
   return (
     <>
       <div className="bg-getbg mt-8">
-        <div className="lg:ml-[100px]  lg:text-3xl text-2xl ">Our Menus</div>
+        <div className="lg:ml-[100px] p-3 text-red-600  lg:text-3xl text-2xl ">
+          Our Menus
+        </div>
 
         <div className="flex flex-wrap items-center justify-center   lg:flex lg:flex-wrap  space-x-2 mt-12 lg:p-2 p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (

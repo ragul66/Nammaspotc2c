@@ -76,7 +76,7 @@ function Home() {
         />
       </div>
 
-      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-8  lg:ml-[100px]">
+      <div className="w-full max-w-4xl text-red-600  lg:text-3xl text-2xl mt-8 p-3 lg:ml-[100px]">
         Our Exciting Offers
       </div>
 
