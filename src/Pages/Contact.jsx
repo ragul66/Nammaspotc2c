@@ -35,12 +35,12 @@ const Contact = () => {
         {/* Header Section */}
         <header className=" text-red-600 text-center py-4 mt-12">
           <h1 className="text-2xl md:text-3xl font-bold">
-            Contact NammaSpotC2C
+            Contact NammaSpotC2Chicken
           </h1>
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-col md:flex-row flex-1 p-2 lg:p-12">
+        <main className="flex flex-col md:flex-row flex-1 p-4 lg:p-12">
           {/* Form Section */}
           <section className="bg-white p-6 rounded shadow-md w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
             <h2 className="text-xl font-bold mb-4">Place Your Order</h2>
