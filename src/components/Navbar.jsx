@@ -105,7 +105,7 @@ function Navbar() {
   };
 
   return (
-    <div className=" flex flex-col sm:flex-row items-center  w-full p-4 bg-yellow-200  lg:bg-gray-500 ">
+    <div className=" flex flex-col sm:flex-row items-center  w-full  p-4  bg-yellow-200  lg:bg-gray-500 ">
       {/* Logo and Brand Name */}
       <div className="flex items-center space-x-2 w-full lg:ml-[100px] sm:w-auto justify-between sm:justify-center">
         <img
@@ -141,7 +141,7 @@ function Navbar() {
         <a
           className={`hover:text-buttoncl ${
             selectedCategory === "HOME"
-              ? "text-buttoncl border-b-2 border-buttoncl"
+              ? "text-red-600 border-b-2 border-red-600"
               : ""
           }`}
           onClick={() => handleNavigation("HOME", "/")}
@@ -151,7 +151,7 @@ function Navbar() {
         <a
           className={`hover:text-buttoncl ${
             selectedCategory === "MENU"
-              ? "text-buttoncl border-b-2 border-buttoncl"
+              ? "text-red-600 border-b-2 border-red-600"
               : ""
           }`}
           onClick={() => handleNavigation("MENU", "/Menu")}
@@ -161,7 +161,7 @@ function Navbar() {
         <a
           className={`hover:text-buttoncl ${
             selectedCategory === "ABOUT"
-              ? "text-buttoncl border-b-2 border-buttoncl"
+              ? "text-red-600 border-b-2 border-red-600"
               : ""
           }`}
           onClick={() => handleNavigation("ABOUT", "/about")}
@@ -171,7 +171,7 @@ function Navbar() {
         <a
           className={`hover:text-buttoncl ${
             selectedCategory === "CONTACT"
-              ? "text-buttoncl border-b-2 border-buttoncl"
+              ? "text-red-600 border-b-2 border-red-600"
               : ""
           }`}
           onClick={() => handleNavigation("CONTACT", "/Contact")}
