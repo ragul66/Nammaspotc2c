@@ -16,7 +16,7 @@ const OfferModal = () => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-scale-up">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-bottom-to-top">
           <div className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4">
             {/* Close Button */}
             <button

@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../assets/burger1.png";
 import Footer from "../components/Footer";
-import offer from "../assets/offerpage.png";
+// import offer from "../assets/offerpage.png";
 
 const Combo = () => {
   const combos = [
