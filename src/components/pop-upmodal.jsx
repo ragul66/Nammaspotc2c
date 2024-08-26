@@ -1,12 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import offerModal from "../assets/offermodal.jpg";
 
 const OfferModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
 
   // Automatically open the modal when the component mounts
   useEffect(() => {
     setIsOpen(true);
+
+    // Function to handle clicks outside the modal
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Attach event listener for clicks
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const handleClose = () => {
@@ -16,18 +32,21 @@ const OfferModal = () => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-bottom-to-top duration-700">
-          <div className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-scale-up duration-700">
+          <div
+            ref={modalRef}
+            className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4"
+          >
             {/* Close Button */}
             <button
-              className="absolute top-4 right-4 text-black hover:text-gray-800 text-3xl -mt-6 mr-auto"
+              className="absolute top-4 right-4 text-black hover:text-gray-800 text-2xl"
               onClick={handleClose}
             >
               &times;
             </button>
 
             {/* Image Section */}
-            <div className="w-full animate-scale-up">
+            <div className="w-full">
               <img
                 src={offerModal} // Replace with your offer image URL
                 alt="Special Offer"

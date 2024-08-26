@@ -4,12 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        font1: ["Edu VIC WA NT Beginner", "cursive"],
+        font1: ["Open Sans", "sans-serif"],
       },
       colors: {
         cardbg: "#222831",
         buttoncl: "#e69c00",
         borderbg: "#ffbe33",
+        whitesmoke: "#F5F5F5",
+        getbg: "#fffbf7",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",

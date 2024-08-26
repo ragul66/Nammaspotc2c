@@ -63,7 +63,7 @@ function Home() {
         />
       </div>
 
-      <div className="flex justify-center items-center font-font1 font-bold text-3xl mt-12">
+      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-12">
         Our Exciting Offers
       </div>
 

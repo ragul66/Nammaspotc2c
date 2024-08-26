@@ -21,7 +21,7 @@ function Navbar() {
           src={logo}
           alt="Logo"
         />
-        <p className="font-serif lg:text-2xl text-xl text-white font-bold">
+        <p className=" lg:text-2xl text-xl text-white font-bold font-font1">
           NammaSpotc2c
         </p>
       </div>

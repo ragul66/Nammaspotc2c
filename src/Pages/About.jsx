@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white p-6 flex flex-col items-center">
       {/* Header Section */}
-      <header className="w-full max-w-4xl text-center mb-12">
-        <h1 className="text-4xl font-bold text-red-600">About NammaspotC2C</h1>
+      <header className="w-full max-w-4xl sm:text-center mb-12">
+        <h1 className="text-2xl lg:text-4xl  ">About NammaspotC2C</h1>
         <p className="text-lg text-gray-700 mt-4">
           Discover the story behind our journey, our commitment to quality, and
           our passion for delicious food.
@@ -27,10 +27,8 @@ const About = () => {
 
         {/* Text Section */}
         <div className="lg:w-1/2">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            Our Journey
-          </h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-3xl text-black mb-4">Our Journey</h2>
+          <p className="text-black mb-6">
             NammaspotC2C started with a passion for great food and a desire to
             share it with the community. We believe in using high-quality
             ingredients to create delicious meals that bring people together.
@@ -39,9 +37,7 @@ const About = () => {
             satisfaction.
           </p>
 
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            Our Values
-          </h2>
+          <h2 className="text-3xl  mb-4">Our Values</h2>
           <p className="text-gray-600">
             We are committed to providing excellent service, maintaining high
             standards of food safety, and giving back to the community. Our team

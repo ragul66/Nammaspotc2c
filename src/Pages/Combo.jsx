@@ -1,7 +1,18 @@
 import React from "react";
 import image from "../assets/burger1.png";
 import Footer from "../components/Footer";
-// import offer from "../assets/offerpage.png";
+
+// burger
+import burger1 from "../assets/burger1.png";
+
+// pasta
+import pasta from "../assets/pasta.png";
+
+//fries
+import fries from "../assets/fries.png";
+
+//pizza
+import pizza from "../assets/pizza.png";
 
 const Combo = () => {
   const combos = [
@@ -17,15 +28,15 @@ const Combo = () => {
       name: "Burger Meal Combo",
       description: "A delicious burger with fries and a soft drink.",
       price: "₹149",
-      image: image,
+      image: pasta,
     },
     {
       id: 3,
       name: "Family Feast",
       description:
         "8 pieces of chicken, 4 biscuits, large fries, and 4 drinks.",
-      price: "₹149",
-      image: image,
+      price: "₹99",
+      image: fries,
     },
     {
       id: 4,
@@ -33,7 +44,7 @@ const Combo = () => {
       description:
         "8 pieces of chicken, 4 biscuits, large fries, and 4 drinks.",
       price: "₹149",
-      image: image,
+      image: pizza,
     },
     {
       id: 5,
@@ -41,7 +52,7 @@ const Combo = () => {
       description:
         "8 pieces of chicken, 4 biscuits, large fries, and 4 drinks.",
       price: "₹149",
-      image: image,
+      image: pasta,
     },
     {
       id: 6,
@@ -49,23 +60,23 @@ const Combo = () => {
       description:
         "8 pieces of chicken, 4 biscuits, large fries, and 4 drinks.",
       price: "₹149",
-      image: image,
+      image: burger1,
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white  p-4 flex flex-col items-center font-font1">
-      <header className="w-full max-w-4xl text-center mb-6">
+    <div className="min-h-screen bg-white  p-4 flex flex-col items-center ">
+      <header className="w-full max-w-4xl  mb-6 font-font1">
         {/* <div className="ml-auto flex flex-row">
           <img className="w-12 h-12" src={offer} />
         </div> */}
-        <h1 className="text-4xl font-bold text-red-600">Combo Offers</h1>
-        <p className="text-lg text-gray-600 mt-2">
+        <h1 className="text-2xl lg:text-3xl  text-red-600">Combo Offers</h1>
+        <p className="text-xs lg:text-lg text-gray-600 mt-2">
           Choose your favorite combo and enjoy the deliciousness!
         </p>
       </header>
 
-      <div className="w-full max-w-6xl  grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 ">
+      <div className="w-full max-w-6xl  grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 font-font1">
         {combos.map((combo) => (
           <div
             key={combo.id}
@@ -76,8 +87,8 @@ const Combo = () => {
               alt={combo.name}
               className="w-full h-48 object-cover rounded-md p-2"
             />
-            <div className="mt-4 animate-scale-up">
-              <h2 className="text-2xl font-semibold text-gray-800">
+            <div className="mt-4 animate-scale-up  ">
+              <h2 className="text-xl font-semibold text-gray-800">
                 {combo.name}
               </h2>
               <p className="text-gray-600 mt-2">{combo.description}</p>

@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import Menu from "./Pages/Menu";
 import Combo from "./Pages/Combo";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 

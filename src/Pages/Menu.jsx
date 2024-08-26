@@ -11,7 +11,7 @@ import fries from "../assets/fries.png";
 
 //pizza
 import pizza from "../assets/pizza.png";
-import Navbar from "../components/Navbar";
+
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const navigate = useNavigate();
@@ -61,10 +61,8 @@ function Menu() {
 
   return (
     <>
-      <div className="bg-gray-300 mt-16">
-        {/* <div className="flex justify-center items-center font-font1 text-3xl text-red-600 font-bold mt-20">
-          Our Home
-        </div> */}
+      <div className="bg-getbg mt-16">
+        <div className="ml-auto lg:text-3xl text-3xl mt-20">Our Menus</div>
 
         <div className="sm:grid sm:grid-cols-4  lg:flex lg:flex-row justify-center items-center space-x-2 mt-12 lg:p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
@@ -104,7 +102,7 @@ function Menu() {
 
         <div className=" flex justify-center items-center mt-12">
           <div
-            className="bg-buttoncl w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer"
+            className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer"
             onClick={() => navigate("/Menu")}
           >
             View More
