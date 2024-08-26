@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import offerModal from "../assets/offermodal.jpg";
+// import offerModal from "../assets/offermodal.jpg";
+import offer from "../assets/offer1.jpg";
+import { useNavigate } from "react-router-dom";
 
 const OfferModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
+  const navigate = useNavigate();
 
   // Automatically open the modal when the component mounts
   useEffect(() => {
@@ -32,10 +35,10 @@ const OfferModal = () => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-scale-up duration-700">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-scale-up duration-700 ">
           <div
             ref={modalRef}
-            className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4"
+            className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full  mx-4"
           >
             {/* Close Button */}
             <button
@@ -48,14 +51,15 @@ const OfferModal = () => {
             {/* Image Section */}
             <div className="w-full">
               <img
-                src={offerModal} // Replace with your offer image URL
+                src={offer} // Replace with your offer image URL
                 alt="Special Offer"
-                className="w-full h-auto rounded-t-lg"
+                className="w-full h-full rounded-t-lg cursor-pointer"
+                onClick={() => navigate("/combos")}
               />
             </div>
 
             {/* Text Content Section */}
-            <div className="p-6 text-center animate-scale-up">
+            {/* <div className="p-6 text-center animate-scale-up">
               <h2 className="text-2xl font-bold text-red-600 mb-2">
                 Special Offer Just for You!
               </h2>
@@ -70,7 +74,7 @@ const OfferModal = () => {
               >
                 Claim Offer Now
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

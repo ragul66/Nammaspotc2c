@@ -6,6 +6,7 @@ import two from "../assets/2.jpg";
 import Navbar from "../components/Navbar";
 import Menu from "./Menu";
 import OfferModal from "../components/pop-upmodal";
+import Footer from "../components/Footer";
 
 function Card({ img, name, offer, order }) {
   return (
@@ -81,6 +82,7 @@ function Home() {
       </div>
 
       <Menu />
+      <Footer />
     </>
   );
 }
