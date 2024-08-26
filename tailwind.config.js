@@ -12,6 +12,7 @@ export default {
         borderbg: "#ffbe33",
         whitesmoke: "#F5F5F5",
         getbg: "#fffbf7",
+        navbg: "rgb(255, 128, 0)",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",

@@ -7,6 +7,7 @@ import two from "../assets/2.jpg";
 import Navbar from "../components/Navbar";
 import Menu from "./Menu";
 import OfferModal from "../components/pop-upmodal";
+import TestimonialCarousel from "../components/Customers";
 
 function Card({ img, name, offer, order }) {
   return (
@@ -60,7 +61,6 @@ function Home() {
     <>
       <OfferModal />
       <div className="">
-        <Navbar />
         {/* Mobile Screen */}
         <img
           src={banner4}
@@ -76,7 +76,7 @@ function Home() {
         />
       </div>
 
-      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-8 ml-[10px] lg:ml-[100px]">
+      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-8  lg:ml-[100px]">
         Our Exciting Offers
       </div>
 
@@ -92,9 +92,9 @@ function Home() {
           />
         ))}
       </div>
-
       <Menu />
-      {/* <Footer /> */}
+
+      <TestimonialCarousel />
     </>
   );
 }

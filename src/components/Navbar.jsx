@@ -85,7 +85,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import gif from "../assets/special gif.gif";
-import menu from "../assets/menu-outline.svg";
+import combooffer from "../assets/combooffer.png";
+import burger from "../assets/pasta.png";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -104,7 +105,7 @@ function Navbar() {
   };
 
   return (
-    <div className="relative flex flex-col sm:flex-row items-center sm:justify-between w-full p-4  bg-cardbg">
+    <div className="relative flex flex-col sm:flex-row items-center  w-full p-4  bg-gray-500 ">
       {/* Logo and Brand Name */}
       <div className="flex items-center space-x-2 w-full lg:ml-[100px] sm:w-auto justify-between sm:justify-center">
         <img
@@ -112,7 +113,7 @@ function Navbar() {
           src={logo}
           alt="Logo"
         />
-        <p className="lg:text-2xl text-xl text-white font-bold  font-serif">
+        <p className="lg:text-2xl text-xl text-whitesmoke font-bold  font-serif">
           NammaSpotc2c
         </p>
 
@@ -124,8 +125,9 @@ function Navbar() {
           >
             <img
               name={isMobileMenuOpen ? "close-outline" : "menu-outline"}
-              src={menu}
+              src={burger}
             />
+            {/* <i class="fa-solid fa-bars"></i> */}
           </button>
         </div>
       </div>
@@ -134,12 +136,12 @@ function Navbar() {
       <div
         className={`${
           isMobileMenuOpen ? "flex" : "hidden"
-        } sm:flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-10 items-center justify-center font-serif text-white cursor-pointer flex-grow`}
+        } sm:flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-10 items-center justify-center font-serif text-whitesmoke cursor-pointer flex-grow`}
       >
         <a
           className={`hover:text-buttoncl ${
             selectedCategory === "HOME"
-              ? "text-gold border-b-2 border-buttoncl"
+              ? "text-buttoncl border-b-2 border-buttoncl"
               : ""
           }`}
           onClick={() => handleNavigation("HOME", "/")}
@@ -148,7 +150,9 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "MENU" ? "text-gold" : ""
+            selectedCategory === "MENU"
+              ? "text-buttoncl border-b-2 border-buttoncl"
+              : ""
           }`}
           onClick={() => handleNavigation("MENU", "/Menu")}
         >
@@ -156,7 +160,9 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "ABOUT" ? "text-gold" : ""
+            selectedCategory === "ABOUT"
+              ? "text-buttoncl border-b-2 border-buttoncl"
+              : ""
           }`}
           onClick={() => handleNavigation("ABOUT", "/about")}
         >
@@ -164,11 +170,23 @@ function Navbar() {
         </a>
         <a
           className={`hover:text-buttoncl ${
-            selectedCategory === "CONTACT" ? "text-gold" : ""
+            selectedCategory === "CONTACT"
+              ? "text-buttoncl border-b-2 border-buttoncl"
+              : ""
           }`}
           onClick={() => handleNavigation("CONTACT", "/Contact")}
         >
           CONTACT
+        </a>
+        <a
+          className={` lg:w-20 lg:h-20 w-12 h-12 ${
+            selectedCategory === "combos"
+              ? "text-buttoncl border-b-2 border-buttoncl"
+              : ""
+          }`}
+          onClick={() => handleNavigation("combos", "/combos")}
+        >
+          <img src={combooffer} />
         </a>
       </div>
 

@@ -10,26 +10,34 @@ import Combo from "./Pages/Combo";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
+// Import Layout
+import Layout from "./components/Layout"; // Import the Layout component
+
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/Menu",
-    element: <Menu />,
-  },
-  {
-    path: "/combos",
-    element: <Combo />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
+    element: <Layout />, // Use Layout for all routes
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+      {
+        path: "/combos",
+        element: <Combo />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 

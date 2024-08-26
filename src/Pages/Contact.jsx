@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import TestimonialCarousel from "../components/Customers";
 
 const Contact = () => {
   const [reviews, setReviews] = useState([]);
@@ -158,12 +160,8 @@ const Contact = () => {
           ></iframe>
         </section>
 
-        {/* Footer Section */}
-        {/* <footer className="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2024 NammaSpotC2C. All rights reserved.</p>
-      </footer> */}
+        <TestimonialCarousel />
       </div>
-      <Footer />
     </>
   );
 };

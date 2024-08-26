@@ -84,13 +84,10 @@ function Menu() {
 
   return (
     <>
-      {/* <Navbar /> */}
       <div className="bg-getbg mt-8">
-        <div className="lg:ml-[100px] ml-[10px] lg:text-3xl text-2xl">
-          Our Menus
-        </div>
+        <div className="lg:ml-[100px]  lg:text-3xl text-2xl">Our Menus</div>
 
-        <div className="sm:grid sm:grid-cols-4  lg:flex lg:flex-row justify-center items-center space-x-2 mt-12 lg:p-2">
+        <div className="grid grid-cols-4 items-center justify-center  lg:flex lg:flex-row  space-x-2 mt-12 lg:p-2 p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
             <p
               key={category}
@@ -141,7 +138,6 @@ function Menu() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
