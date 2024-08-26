@@ -4,7 +4,6 @@ import bannerm from "../assets/banner mobile.jpg";
 import banner4 from "../assets/banner4.jpg";
 import one from "../assets/1.jpg";
 import two from "../assets/2.jpg";
-import Navbar from "../components/Navbar";
 import Menu from "./Menu";
 import OfferModal from "../components/pop-upmodal";
 import TestimonialCarousel from "../components/Customers";
