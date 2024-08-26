@@ -85,13 +85,13 @@ function Menu() {
   return (
     <>
       <div className="bg-getbg mt-8">
-        <div className="lg:ml-[100px]  lg:text-3xl text-2xl">Our Menus</div>
+        <div className="lg:ml-[100px]  lg:text-3xl text-2xl ">Our Menus</div>
 
-        <div className="grid grid-cols-4 items-center justify-center  lg:flex lg:flex-row  space-x-2 mt-12 lg:p-2 p-2">
+        <div className="flex flex-wrap items-center justify-center   lg:flex lg:flex-wrap  space-x-2 mt-12 lg:p-2 p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
             <p
               key={category}
-              className={`sm:grid sm:grid-col-4  p-2 rounded-full w-20 flex justify-center items-center cursor-pointer animate-bottom-to-top ${
+              className={`sm:grid sm:grid-col-4   p-2 rounded-full w-20 flex justify-center items-center cursor-pointer animate-bottom-to-top ${
                 selectedCategory === category
                   ? "bg-red-600 text-white"
                   : "bg-white text-black"

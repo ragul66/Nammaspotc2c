@@ -105,7 +105,7 @@ function Navbar() {
   };
 
   return (
-    <div className="relative flex flex-col sm:flex-row items-center  w-full p-4  bg-gray-500 ">
+    <div className=" flex flex-col sm:flex-row items-center  w-full p-4 bg-yellow-200  lg:bg-gray-500 ">
       {/* Logo and Brand Name */}
       <div className="flex items-center space-x-2 w-full lg:ml-[100px] sm:w-auto justify-between sm:justify-center">
         <img
@@ -113,7 +113,7 @@ function Navbar() {
           src={logo}
           alt="Logo"
         />
-        <p className="lg:text-2xl text-xl text-whitesmoke font-bold  font-serif">
+        <p className="lg:text-2xl text-xl text-black font-bold  font-serif">
           NammaSpotc2c
         </p>
 
@@ -136,7 +136,7 @@ function Navbar() {
       <div
         className={`${
           isMobileMenuOpen ? "flex" : "hidden"
-        } sm:flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-10 items-center justify-center font-serif text-whitesmoke cursor-pointer flex-grow`}
+        } sm:flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-10 items-center justify-center font-serif text-black cursor-pointer flex-grow`}
       >
         <a
           className={`hover:text-buttoncl ${
