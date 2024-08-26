@@ -12,6 +12,7 @@ import fries from "../assets/fries.png";
 //pizza
 import pizza from "../assets/pizza.png";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -83,6 +84,7 @@ function Menu() {
 
   return (
     <>
+      {/* <Navbar /> */}
       <div className="bg-getbg mt-8">
         <div className="lg:ml-[100px] ml-[10px] lg:text-3xl text-2xl">
           Our Menus
@@ -92,8 +94,10 @@ function Menu() {
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
             <p
               key={category}
-              className={`sm:grid sm:grid-col-4 text-white bg-cardbg p-2 rounded-full w-20 flex justify-center items-center cursor-pointer ${
-                selectedCategory === category ? "bg-selectedbg" : ""
+              className={`sm:grid sm:grid-col-4  p-2 rounded-full w-20 flex justify-center items-center cursor-pointer animate-bottom-to-top ${
+                selectedCategory === category
+                  ? "bg-red-600 text-white"
+                  : "bg-white text-black"
               }`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -106,7 +110,7 @@ function Menu() {
           {filteredData.map((item, index) => (
             <div
               key={index}
-              className="bg-white m-4 p-4 rounded-lg  w-80 md:w-60 lg:w-80 shadow-2xl font-font1 hover:scale-105 transition-transform duration-300"
+              className="bg-white m-4 p-4 rounded-lg  w-80 md:w-60 lg:w-80 shadow-2xl font-font1 hover:scale-105 transition-transform duration-300 animate-bottom-to-top"
             >
               <img
                 src={item.img}
@@ -128,8 +132,16 @@ function Menu() {
             </div>
           ))}
         </div>
+        <div className=" flex justify-center items-center mt-12">
+          <div
+            className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-xl hover:bg-gray-400 cursor-pointer mb-12"
+            onClick={() => navigate("/Menu")}
+          >
+            View More
+          </div>
+        </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

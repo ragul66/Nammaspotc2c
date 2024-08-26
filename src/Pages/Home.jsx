@@ -1,12 +1,12 @@
 import React from "react";
-import banner from "../assets/banner1.jpg";
+// import banner from "../assets/banner1.jpg";
 import bannerm from "../assets/banner mobile.jpg";
+import banner4 from "../assets/banner4.jpg";
 import one from "../assets/1.jpg";
 import two from "../assets/2.jpg";
 import Navbar from "../components/Navbar";
 import Menu from "./Menu";
 import OfferModal from "../components/pop-upmodal";
-import Footer from "../components/Footer";
 
 function Card({ img, name, offer, order }) {
   return (
@@ -63,7 +63,7 @@ function Home() {
         <Navbar />
         {/* Mobile Screen */}
         <img
-          src={banner}
+          src={banner4}
           alt="LaptopScreen"
           className="hidden sm:block md:block w-full h-fit lg:mb-24"
         />
@@ -94,15 +94,7 @@ function Home() {
       </div>
 
       <Menu />
-      <div className=" flex justify-center items-center mt-12">
-        <div
-          className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-xl hover:bg-gray-400 cursor-pointer mb-12"
-          onClick={() => navigate("/Menu")}
-        >
-          View More
-        </div>
-      </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
