@@ -11,6 +11,7 @@ import fries from "../assets/fries.png";
 
 //pizza
 import pizza from "../assets/pizza.png";
+import Footer from "../components/Footer";
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -61,8 +62,8 @@ function Menu() {
 
   return (
     <>
-      <div className="bg-getbg mt-16">
-        <div className="ml-auto lg:text-3xl text-3xl mt-20">Our Menus</div>
+      <div className="bg-getbg">
+        <div className="ml-auto lg:text-3xl text-3xl">Our Menus</div>
 
         <div className="sm:grid sm:grid-cols-4  lg:flex lg:flex-row justify-center items-center space-x-2 mt-12 lg:p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
@@ -87,13 +88,18 @@ function Menu() {
               <img
                 src={item.img}
                 alt={item.headdname}
-                className="w-full h-40 object-cover rounded-lg hover:scale-110"
+                className="w-full h-40 object-cover rounded-lg"
               />
-              <div className="bg-cardbg text-white p-2 rounded-lg mt-2">
+              <div className=" text-black p-2 rounded-lg mt-2">
                 <h3 className="text-xl font-bold mt-2">{item.headdname}</h3>
                 <p className="mt-2">{item.Description}</p>
-                <div className="text-xl font-bold mt-2 text-buttoncl">
-                  {item.price}
+                <div className="flex justify-between items-center mt-4">
+                  <span className="text-red-500 font-bold text-xl">
+                    {item.price}
+                  </span>
+                  <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -102,13 +108,14 @@ function Menu() {
 
         <div className=" flex justify-center items-center mt-12">
           <div
-            className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer"
+            className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer mb-12"
             onClick={() => navigate("/Menu")}
           >
             View More
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
