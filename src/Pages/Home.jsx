@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 
 function Card({ img, name, offer, order }) {
   return (
-    <div className="sm:flex sm:flex-col md:flex-row lg:flex  lg:flex-row  justify-center items-center sm:items-center sm:justify-center  lg:w-[500px] shadow-lg rounded-lg p-8 mt-12 bg-cardbg font-font1 text-xl">
+    <div className="sm:flex sm:flex-col md:flex-row lg:flex  lg:flex-row  justify-center items-center sm:items-center sm:justify-center  lg:w-[500px] shadow-lg rounded-lg p-8 mt-8 bg-cardbg font-font1 text-xl">
       <div className="flex flex-col items-center md:flex-row md:items-start md:space-x-4">
         <img
           className="rounded-full w-32 h-32 border-4 border-borderbg hover:scale-110"
@@ -31,13 +31,25 @@ function Card({ img, name, offer, order }) {
 function Home() {
   const data = [
     {
-      name: "Tasty Thursday",
+      name: "Tasty Sunday",
       offer: "20% off",
       order: "Order Now",
       img: one,
     },
     {
       name: "Pizza days",
+      offer: "15% off",
+      order: "Order Now",
+      img: two,
+    },
+    {
+      name: "Pizza days",
+      offer: "15% off",
+      order: "Order Now",
+      img: two,
+    },
+    {
+      name: "Summer Fries",
       offer: "15% off",
       order: "Order Now",
       img: two,
@@ -64,12 +76,12 @@ function Home() {
         />
       </div>
 
-      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-12">
+      <div className="w-full max-w-4xl  lg:text-3xl text-2xl mt-8 ml-[10px] lg:ml-[100px]">
         Our Exciting Offers
       </div>
 
       {/* Center the cards on large screens */}
-      <div className="grid grid-cols-2 md:grid md:grid-cols-2 lg:flex lg:justify-center lg:items-center gap-4 p-4">
+      <div className="grid grid-cols-2  md:grid md:grid-cols-2 lg:flex  lg:justify-center lg:items-center gap-4 p-4">
         {data.map((item, index) => (
           <Card
             key={index}
@@ -82,6 +94,14 @@ function Home() {
       </div>
 
       <Menu />
+      <div className=" flex justify-center items-center mt-12">
+        <div
+          className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-xl hover:bg-gray-400 cursor-pointer mb-12"
+          onClick={() => navigate("/Menu")}
+        >
+          View More
+        </div>
+      </div>
       <Footer />
     </>
   );

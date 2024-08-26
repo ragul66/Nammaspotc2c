@@ -53,6 +53,27 @@ function Menu() {
       Description: "Crispy golden french fries.",
       price: "₹49",
     },
+    {
+      heading: "Fries",
+      img: fries,
+      headdname: "French Fries",
+      Description: "Crispy golden french fries.",
+      price: "₹49",
+    },
+    {
+      heading: "Fries",
+      img: fries,
+      headdname: "French Fries",
+      Description: "Crispy golden french fries.",
+      price: "₹49",
+    },
+    {
+      heading: "Fries",
+      img: fries,
+      headdname: "French Fries",
+      Description: "Crispy golden french fries.",
+      price: "₹49",
+    },
   ];
 
   const filteredData =
@@ -62,8 +83,10 @@ function Menu() {
 
   return (
     <>
-      <div className="bg-getbg">
-        <div className="ml-auto lg:text-3xl text-3xl">Our Menus</div>
+      <div className="bg-getbg mt-8">
+        <div className="lg:ml-[100px] ml-[10px] lg:text-3xl text-2xl">
+          Our Menus
+        </div>
 
         <div className="sm:grid sm:grid-cols-4  lg:flex lg:flex-row justify-center items-center space-x-2 mt-12 lg:p-2">
           {["All", "Burger", "Pizza", "Pasta", "Fries"].map((category) => (
@@ -105,17 +128,8 @@ function Menu() {
             </div>
           ))}
         </div>
-
-        <div className=" flex justify-center items-center mt-12">
-          <div
-            className="bg-red-500 w-fit rounded-full text-white font-font1 p-2 text-2xl hover:bg-gray-400 cursor-pointer mb-12"
-            onClick={() => navigate("/Menu")}
-          >
-            View More
-          </div>
-        </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
