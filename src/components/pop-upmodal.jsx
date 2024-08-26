@@ -16,7 +16,7 @@ const OfferModal = () => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-scale-up">
           <div className="relative bg-white rounded-lg shadow-lg p-4 max-w-lg w-full mx-4">
             {/* Close Button */}
             <button
@@ -27,7 +27,7 @@ const OfferModal = () => {
             </button>
 
             {/* Image Section */}
-            <div className="w-full">
+            <div className="w-full animate-scale-up">
               <img
                 src={offerModal} // Replace with your offer image URL
                 alt="Special Offer"
@@ -36,7 +36,7 @@ const OfferModal = () => {
             </div>
 
             {/* Text Content Section */}
-            <div className="p-6 text-center">
+            <div className="p-6 text-center animate-scale-up">
               <h2 className="text-2xl font-bold text-red-600 mb-2">
                 Special Offer Just for You!
               </h2>

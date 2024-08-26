@@ -76,7 +76,7 @@ const Combo = () => {
               alt={combo.name}
               className="w-full h-48 object-cover rounded-md p-2"
             />
-            <div className="mt-4">
+            <div className="mt-4 animate-scale-up">
               <h2 className="text-2xl font-semibold text-gray-800">
                 {combo.name}
               </h2>
