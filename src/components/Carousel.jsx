@@ -1,4 +1,4 @@
-// CarouselComponent.jsx
+//carousel component
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -9,20 +9,26 @@ import bannerl2 from "../assets/bannerl2.jpg";
 import bannerm from "../assets/banner mobile.jpg";
 import bannerm1 from "../assets/pizzabannerm.jpg";
 import bannerm2 from "../assets/bannerm2.jpg";
+
 const CarouselComponent = () => {
+  // Helper function to determine if the screen is mobile
+  const isMobile = window.innerWidth < 1024;
+
   return (
     <div className="w-full h-fit bg-gray-100 flex justify-center items-center">
       <Carousel
         showThumbs={false}
         showStatus={false}
         showIndicators={true}
-        autoPlay={true} // Enable auto sliding
+        autoPlay={isMobile} // Enable auto sliding only for mobile
         infiniteLoop={true} // Enable infinite loop
-        interval={3000} // Slide change interval
+        interval={2000} // Slide change interval
+        swipeable={isMobile} // Allow swipe on mobile only
+        emulateTouch={isMobile} // Allow touch to emulate swipe on mobile
         className="w-full h-full"
       >
         {/* Slide 1 */}
-        <div className="w-full h-full">
+        <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
             {/* Image for large screens */}
             <source media="(min-width: 1024px)" srcSet={bannerl} />
@@ -47,7 +53,7 @@ const CarouselComponent = () => {
         </div>
 
         {/* Slide 2 */}
-        <div className="w-full h-full">
+        <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
             <source media="(min-width: 1024px)" srcSet={bannerl2} />
             <img
@@ -70,7 +76,7 @@ const CarouselComponent = () => {
         </div>
 
         {/* Slide 3 */}
-        <div className="w-full h-full">
+        <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
             <source
               media="(min-width: 1024px)"
@@ -83,7 +89,7 @@ const CarouselComponent = () => {
             />
           </picture>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right mr-auto">
               ASpiring Combos
             </h2>
             <p className="text-md md:text-lg animate-bottom-to-top">
