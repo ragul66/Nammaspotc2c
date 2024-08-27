@@ -7,6 +7,7 @@ import two from "../assets/2.jpg";
 import Menu from "./Menu";
 import OfferModal from "../components/pop-upmodal";
 import TestimonialCarousel from "../components/Customers";
+import CarouselComponent from "../components/Carousel";
 
 function Card({ img, name, offer, order }) {
   return (
@@ -59,21 +60,22 @@ function Home() {
   return (
     <>
       <OfferModal />
-      <div className="">
-        {/* Mobile Screen */}
-        <img
+      {/* <div className=""> */}
+      {/* Mobile Screen */}
+      {/* <img
           src={banner4}
           alt="LaptopScreen"
           className="hidden sm:block md:block w-full h-fit lg:mb-24"
-        />
+        /> */}
 
-        {/* Laptop image */}
-        <img
+      {/* Laptop image */}
+      {/* <img
           src={bannerm}
           alt="mobilescreen"
           className="block sm:hidden w-full"
         />
-      </div>
+      </div> */}
+      <CarouselComponent />
 
       <div className="w-full max-w-4xl text-red-600  lg:text-3xl text-2xl mt-8 p-3 lg:ml-[100px]">
         Our Exciting Offers
