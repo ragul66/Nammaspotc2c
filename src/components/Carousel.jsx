@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import bannerl from "../assets/banner1.jpg";
 import bannerl2 from "../assets/bannerl2.jpg";
+import bannerl3 from "../assets/bannerl3.webp";
 
 import bannerm from "../assets/banner mobile.jpg";
 import bannerm1 from "../assets/pizzabannerm.jpg";
@@ -20,9 +21,9 @@ const CarouselComponent = () => {
         showThumbs={false}
         showStatus={false}
         showIndicators={true}
-        autoPlay={isMobile} // Enable auto sliding only for mobile
+        autoPlay={true} // Enable auto sliding only for mobile
         infiniteLoop={true} // Enable infinite loop
-        interval={2000} // Slide change interval
+        interval={3000} // Slide change interval
         swipeable={isMobile} // Allow swipe on mobile only
         emulateTouch={isMobile} // Allow touch to emulate swipe on mobile
         className="w-full h-full"
@@ -31,7 +32,7 @@ const CarouselComponent = () => {
         <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
             {/* Image for large screens */}
-            <source media="(min-width: 1024px)" srcSet={bannerl} />
+            <source media="(min-width: 1024px)" srcSet={bannerl2} />
             {/* Image for smaller screens */}
             <img
               src={bannerm}
@@ -40,14 +41,14 @@ const CarouselComponent = () => {
             />
           </picture>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-            <h2 className="text-2xl md:text-4xl  font-bold mb-4 animate-left-to-right">
+            <h1 className="text-2xl md:text-4xl  font-bold mb-4 animate-left-to-right ">
               Blasting Burgers
-            </h2>
+            </h1>
             <p className="text-md md:text-lg p-2 animate-bottom-to-top">
               Burgers are sandwiches with a meat or veggie patty between buns.
-              They often include toppings like cheese,
-              <br /> lettuce, tomatoes, and sauces. Popular for their juicy
-              texture and delicious flavor.
+              They often include toppings <br />
+              like cheese, lettuce, tomatoes, and sauces. Popular for their
+              juicy texture and delicious flavor.
             </p>
           </div>
         </div>
@@ -55,7 +56,7 @@ const CarouselComponent = () => {
         {/* Slide 2 */}
         <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
-            <source media="(min-width: 1024px)" srcSet={bannerl2} />
+            <source media="(min-width: 1024px)" srcSet={bannerl} />
             <img
               src={bannerm1}
               alt="Slide 2"
@@ -63,9 +64,9 @@ const CarouselComponent = () => {
             />
           </picture>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right">
+            <h1 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right">
               Pizza days💕
-            </h2>
+            </h1>
             <p className="text-md md:text-lg p-2 animate-bottom-to-top">
               Pizza is a flatbread topped with tomato sauce, cheese, and various
               toppings like pepperoni, <br />
@@ -78,10 +79,7 @@ const CarouselComponent = () => {
         {/* Slide 3 */}
         <div className={`w-full ${isMobile ? "h-full" : "h-[500px]"}`}>
           <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet="https://via.placeholder.com/1600x900.png?text=Large+Screen+Image+3"
-            />
+            <source media="(min-width: 1024px)" srcSet={bannerl3} />
             <img
               src={bannerm2}
               alt="Slide 3"
@@ -89,9 +87,9 @@ const CarouselComponent = () => {
             />
           </picture>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right mr-auto">
+            <h1 className="text-2xl md:text-4xl font-bold mb-4 animate-left-to-right">
               ASpiring Combos
-            </h2>
+            </h1>
             <p className="text-md md:text-lg animate-bottom-to-top">
               This is the third slide. Make it engaging!
             </p>

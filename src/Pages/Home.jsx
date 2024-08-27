@@ -11,7 +11,7 @@ import CarouselComponent from "../components/Carousel";
 
 function Card({ img, name, offer, order }) {
   return (
-    <div className="sm:flex sm:flex-col md:flex-row lg:flex  lg:flex-row  justify-center items-center sm:items-center sm:justify-center  lg:w-[500px] shadow-lg rounded-lg p-8 mt-8 bg-cardbg font-font1 text-xl">
+    <div className="sm:flex sm:flex-col md:flex-row lg:flex  lg:flex-row  justify-center items-center sm:items-center sm:justify-center  lg:w-[500px] shadow-lg rounded-lg p-8 mt-0 bg-cardbg font-font1 text-xl">
       <div className="flex flex-col items-center md:flex-row md:items-start md:space-x-4">
         <img
           className="rounded-full w-32 h-32 border-4 border-borderbg hover:scale-110"
@@ -77,7 +77,7 @@ function Home() {
       </div> */}
       <CarouselComponent />
 
-      <div className="w-full max-w-4xl text-red-600  lg:text-3xl text-2xl mt-8 p-3 lg:ml-[100px]">
+      <div className="w-full max-w-4xl text-red-600  lg:text-3xl text-2xl mt-4 p-3 lg:ml-[100px]">
         Our Exciting Offers
       </div>
 

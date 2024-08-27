@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 // burger
 import burger1 from "../assets/burger1.png";
 
@@ -11,12 +12,15 @@ import fries from "../assets/fries.png";
 
 //pizza
 import pizza from "../assets/pizza.png";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const navigate = useNavigate();
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.1, // Threshold to trigger animation
+  });
 
   const data = [
     {
@@ -84,7 +88,14 @@ function Menu() {
 
   return (
     <>
-      <div className="bg-getbg ">
+      <div
+        ref={ref}
+        className={`transition-opacity duration-1000 ease-in-out transform ${
+          inView
+            ? "opacity-100 translate-y-0 bg-getbg"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="lg:ml-[100px] p-3 text-red-600  lg:text-3xl text-2xl ">
           Our Menus
         </div>
@@ -105,7 +116,7 @@ function Menu() {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center items-center mt-12 ">
+        <div className="flex flex-wrap justify-center items-center mt-4 ">
           {filteredData.map((item, index) => (
             <div
               key={index}
