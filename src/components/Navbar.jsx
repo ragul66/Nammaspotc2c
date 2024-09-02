@@ -88,6 +88,16 @@ function Navbar() {
               ? "text-red-600 border-b-2 border-red-600"
               : ""
           }`}
+          onClick={() => handleNavigation("COMBOS", "/combos")}
+        >
+          COMBOS
+        </a>
+        <a
+          className={`hover:text-buttoncl ${
+            selectedCategory === "CONTACT"
+              ? "text-red-600 border-b-2 border-red-600"
+              : ""
+          }`}
           onClick={() => handleNavigation("CONTACT", "/Contact")}
         >
           CONTACT
